@@ -1,2 +1,2 @@
-# git-campus-news
-stores the code for the CampusWeekly website
+# CampusWeekly
+This project is all about your weekly campus news
