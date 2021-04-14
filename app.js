@@ -27,6 +27,9 @@ app.get("/internship", (req, res)=>{
 app.get("/graduation", (req, res)=>{
     res.render("graduation");
 });
+app.get("/inspiration", (req, res)=>{
+    res.render("inspiration");
+});
 
 
 app.listen(PORT, ()=> console.log(`Listening on Port ${PORT}`));
