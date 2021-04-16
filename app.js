@@ -30,6 +30,8 @@ app.get("/graduation", (req, res)=>{
 app.get("/inspiration", (req, res)=>{
     res.render("inspiration");
 });
-
+app.get("/powerless", (req, res)=>{
+    res.render("powerless");
+});
 
 app.listen(PORT, ()=> console.log(`Listening on Port ${PORT}`));
