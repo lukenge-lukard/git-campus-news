@@ -33,5 +33,11 @@ app.get("/inspiration", (req, res)=>{
 app.get("/powerless", (req, res)=>{
     res.render("powerless");
 });
+app.get("/noticeboard", (req, res)=>{
+    res.render("noticeboard");
+});
+app.get("/chief-fresher-debate", (req, res)=>{
+    res.render("chief-fresher-debate");
+});
 
 app.listen(PORT, ()=> console.log(`Listening on Port ${PORT}`));
