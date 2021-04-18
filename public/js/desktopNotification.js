@@ -5,7 +5,7 @@ function showNotification() {
     });
 
     notification.onclick = (e) => {
-        window.location.href = "https://google.com";
+        window.location.href = "https://campusweekly.herokuapp.com/chief-fresher-debate";
     };
 }
 // default, granted, denied
