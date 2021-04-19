@@ -36,6 +36,9 @@ app.get("/powerless", (req, res)=>{
 app.get("/noticeboard", (req, res)=>{
     res.render("noticeboard");
 });
+app.get("/she-won", (req, res)=>{
+    res.render("she-won");
+});
 app.get("/chief-fresher-debate", (req, res)=>{
     res.render("chief-fresher-debate");
 });
