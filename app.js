@@ -36,11 +36,17 @@ app.get("/powerless", (req, res)=>{
 app.get("/noticeboard", (req, res)=>{
     res.render("noticeboard");
 });
+app.get("/chief-fresher-debate", (req, res)=>{
+    res.render("chief-fresher-debate");
+});
 app.get("/she-won", (req, res)=>{
     res.render("she-won");
 });
-app.get("/chief-fresher-debate", (req, res)=>{
-    res.render("chief-fresher-debate");
+app.get("/money", (req, res)=>{
+    res.render("money");
+});
+app.get("/student-midwives", (req, res)=>{
+    res.render("student-midwives");
 });
 
 app.listen(PORT, ()=> console.log(`Listening on Port ${PORT}`));
