@@ -21,6 +21,42 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+
+    <style type="text/css">
+        .slider {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .slick-slide {
+            margin: 0px 20px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -495,8 +531,101 @@
         </div>
     </div>
 
+
     <!--cards-->
-    <div class="container-fluid padding">
+    <section class="center slider">
+        <div>
+            <div class="row padding">
+                <div class="col md-4">
+                    <div class="card">
+                        <img class="card-imd-top" src="images/ben.JPG" alt="" style=" width: 100%;">
+                        <div class="card-body">
+                            <h4 class="card-title">Lukenge Lukard</h4>
+                            <p class="card-text">
+                                Back End Developer
+                                <br>Chief Editor, Campus News
+                            </p>
+                            <a class="btn btn-outline-secondary" href="https://adventuresoflukard.herokuapp.com"
+                                target="_blank">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row padding">
+                <div class="col md-4">
+                    <div class="card">
+                        <img class="card-imd-top" src="images/matia3.jpg" alt="" style=" width: 100%;">
+                        <div class="card-body">
+                            <h4 class="card-title">Nyanzi Matia</h4>
+                            <p class="card-text">
+                                Web Developer - PHP, JS
+                                <br>Director, JCM Technologies
+                            </p>
+                            <a class="btn btn-outline-secondary" href="#">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row padding">
+                <div class="col md-4">
+                    <div class="card">
+                        <img class="card-imd-top" src="images/sam.jpg" alt="" style=" width: 100%;">
+                        <div class="card-body">
+                            <h4 class="card-title">Xamuel UG</h4>
+                            <p class="card-text">
+                                Full Stack Developer
+                                <br>YammieShoppers.com
+                            </p>
+                            <a class="btn btn-outline-secondary" href="#">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row padding">
+                <div class="col md-4">
+                    <div class="card">
+                        <img class="card-imd-top" src="images/lukard_logo.jpg" alt="" style=" width: 100%;">
+                        <div class="card-body">
+                            <h4 class="card-title">Aron Eryau</h4>
+                            <p class="card-text">
+                                Inspiration Writer
+                                <br>
+                                <br>CampusWeekly News
+                            </p>
+                            <a class="btn btn-outline-secondary" href="#">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row padding">
+                <div class="col md-4">
+                    <div class="card">
+                        <img class="card-imd-top" src="images/lukard_logo.jpg" alt="" style=" width: 100%;">
+                        <div class="card-body">
+                            <h4 class="card-title">Ocepa Amos</h4>
+                            <p class="card-text">
+                                Inspiration Writer
+                                <br>
+                                <br>CampusWeekly News
+                            </p>
+                            <a class="btn btn-outline-secondary" href="#">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--cards-->
+    {{!-- <div class="container-fluid padding">
         <div class="row padding">
             <div class="col md-4">
                 <div class="card">
@@ -546,7 +675,7 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--Connect-->
     <div class="container-fluid padding">
         <div class="row text-center padding">
@@ -645,6 +774,46 @@
 
     <script src="js/desktopNotification.js"></script>
 
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $('.center').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '60px',
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 786,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '60px',
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '20px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 
 </html>
