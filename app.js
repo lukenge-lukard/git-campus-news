@@ -48,5 +48,8 @@ app.get("/money", (req, res)=>{
 app.get("/student-midwives", (req, res)=>{
     res.render("student-midwives");
 });
+app.get("/mental-health-awareness", (req, res)=>{
+    res.render("mental-health-awareness");
+});
 
 app.listen(PORT, ()=> console.log(`Listening on Port ${PORT}`));
