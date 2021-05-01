@@ -15,6 +15,12 @@ app.get("/", (req, res)=>{
 app.get("/story", (req, res)=>{
     res.render("story");
 });
+app.get("/campus-101", (req, res)=>{
+    res.render("campus-101");
+});
+app.get("/they-are-back", (req, res)=>{
+    res.render("they-are-back");
+});
 app.get("/lifestyle", (req, res)=>{
     res.render("debate");
 });
@@ -53,6 +59,9 @@ app.get("/mental-health-awareness", (req, res)=>{
 });
 app.get("/LDC-guild-swearing-in", (req, res)=>{
     res.render("LDC-guild-swearing-in");
+});
+app.get("/saturday-1-may-2021", (req, res)=>{
+    res.render("saturday-1-may-2021");
 });
 
 app.listen(PORT, ()=> console.log(`Listening on Port ${PORT}`));
