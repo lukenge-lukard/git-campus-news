@@ -11,6 +11,12 @@ app.set("view engine", "hbs");
 app.get("/", (req, res)=>{
     res.render("index");
 });
+app.get("/admin", (req, res)=>{
+    res.render("admin/login");
+});
+app.get("/admin/index", (req, res)=>{
+    res.render("admin/index");
+});
 
 app.get("/story", (req, res)=>{
     res.render("story");
@@ -62,6 +68,9 @@ app.get("/LDC-guild-swearing-in", (req, res)=>{
 });
 app.get("/saturday-1-may-2021", (req, res)=>{
     res.render("saturday-1-may-2021");
+});
+app.get("/saturday-8-may-2021", (req, res)=>{
+    res.render("saturday-8-may-2021");
 });
 
 app.listen(PORT, ()=> console.log(`Listening on Port ${PORT}`));
