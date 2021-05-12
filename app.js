@@ -72,5 +72,8 @@ app.get("/saturday-1-may-2021", (req, res)=>{
 app.get("/saturday-8-may-2021", (req, res)=>{
     res.render("saturday-8-may-2021");
 });
+app.get("/check-on-your-friends", (req, res)=>{
+    res.render("check-on-your-friends");
+});
 
 app.listen(PORT, ()=> console.log(`Listening on Port ${PORT}`));
