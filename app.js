@@ -78,5 +78,8 @@ app.get("/check-on-your-friends", (req, res)=>{
 app.get("/tied-and-ready", (req, res)=>{
     res.render("tied-and-ready");
 });
+app.get("/food-and-restaurants", (req, res)=>{
+    res.render("food-and-restaurants");
+});
 
 app.listen(PORT, ()=> console.log(`Listening on Port ${PORT}`));
