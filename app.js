@@ -87,5 +87,8 @@ app.get("/my-decision", (req, res)=>{
 app.get("/saturday-12-june-2021", (req, res)=>{
     res.render("saturday-12-june-2021");
 });
+app.get("/saturday-19-june-2021", (req, res)=>{
+    res.render("saturday-19-june-2021");
+});
 
 app.listen(PORT, ()=> console.log(`Listening on Port ${PORT}`));
