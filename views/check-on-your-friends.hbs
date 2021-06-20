@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="public, max-age=300, s-maxage=600">
-    <title>CampusWeekly</title>
+    <title>Campus Weekly | Check on your friends</title>
     <link rel="shortcut icon" href="images/campusweeklyfavicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -21,53 +21,7 @@
 
 <body>
 
-    <!--Navigation-->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="/campusweeklylogo.png " alt="logo"
-                    style=" height: 80px; width: 120px; background-color: rgb(255, 255, 254);">
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse text-right" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto ">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/campus-101">Campus 101</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/interview">Interviews</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="/internship">Internship</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/inspiration">Inspiration</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/uncensored">Uncensored</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/noticeboard">NoticeBoard</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-
-    <!--slider images-->
-
-    <!--JUmbotron-->
-
-    <!--welcome-->
-
-
-    <!--Three column selection-->
+    {{> header}}
 
     <!--Two column section-->
     <div class="container">
@@ -159,7 +113,7 @@
     </div>
     
     {{> footer}}
-    
+
     <script>
         var beamer_config = {
             product_id: "IpeHROOo31380" //DO NOT CHANGE: This is your product code on Beamer
