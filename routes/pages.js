@@ -49,12 +49,9 @@ router.get("/midwifery-internship", (req, res)=>{
 router.get("/graduation", (req, res)=>{
     res.render("graduation");
 });
-
-
 router.get("/powerless", (req, res)=>{
     res.render("powerless");
 });
-
 router.get("/chief-fresher-debate", (req, res)=>{
     res.render("chief-fresher-debate");
 });
