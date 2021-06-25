@@ -94,5 +94,8 @@ router.get("/saturday-12-june-2021", (req, res)=>{
 router.get("/saturday-19-june-2021", (req, res)=>{
     res.render("saturday-19-june-2021");
 });
+router.get("/interview-with-mr-bwambale", (req, res)=>{
+    res.render("interview-with-mr-bwambale");
+});
 
 module.exports = router;
