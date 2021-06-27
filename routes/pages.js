@@ -32,6 +32,9 @@ router.get("/admin", (req, res)=>{
 router.get("/admin/index", (req, res)=>{
     res.render("admin/index");
 });
+router.get("/admin/dashboard", (req, res)=>{
+    res.render("dashboard");
+});
 
 // new story file routes
 router.get("/they-are-back", (req, res)=>{
