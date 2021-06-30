@@ -33,7 +33,7 @@ router.get("/admin/index", (req, res)=>{
     res.render("admin/index");
 });
 router.get("/admin/dashboard", (req, res)=>{
-    res.render("dashboard");
+    res.render("admin/dashboard");
 });
 
 // new story file routes
