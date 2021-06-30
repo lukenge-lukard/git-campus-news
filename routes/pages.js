@@ -6,6 +6,9 @@ const router = express.Router();
 router.get("/", (req, res)=>{
     res.render("maintabs/index");
 });
+router.get("/dashboard", (req, res)=>{
+    res.render("maintabs/dashboard");
+});
 router.get("/campus-101", (req, res)=>{
     res.render("maintabs/campus-101");
 });
