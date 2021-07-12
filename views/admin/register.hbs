@@ -1,0 +1,55 @@
+
+    <div class="container mt-5 h-100">
+        <div class="card " style="background-color: #020138;">
+            <div class="card-header text-white font-weight-bold">
+                <h4>Form still under dev't</h4> 
+            </div>
+            <div class="card-body" >
+                <form>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-user fa-lg"></i></span>
+                            </div>
+                            <input type="text" name="surname" id="surname" class="form-control input_user py-2" value="" placeholder="Enter Surname">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-user-circle-o"></i></span>
+                            </div>
+                            <input type="text" name="firstname" id="firstname" class="form-control input_user py-2" value="" placeholder="Enter Firstname">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            </div>
+                            <input type="text" name="email" id="email" class="form-control input_user py-2" value="" placeholder="Email Address">
+                        </div>            
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-lock fa-lg"></i></span>
+                            </div>
+                            <input type="password" name="password" id="password" class="form-control input_pass py-2" value=""
+                                placeholder="Create Password">
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa fa-lock fa-lg"></i></span>
+                            </div>
+                            <input type="password" name="passwordConfirm" id="passwordConfirm" class="form-control input_pass py-2" value=""
+                                placeholder="Confirm Password">
+                        </div>                    
+                        
+                        <button type="submit" class="btn btn-primary mt-2">Register User</button>
+                    </form>
+                
+            </div>
+        </div>
+
+        {{#if message}}
+            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
+    </div>
+   
+
+
+ 

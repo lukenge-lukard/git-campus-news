@@ -57,10 +57,31 @@
             opacity: 1;
         }
     </style>
+    <style>
+        .scrollmenu{
+            background-color: #fff;
+            overflow: auto;
+            white-space: nowrap;
+        }
+        .scrollmenu div{
+            display: inline-block;
+            color: #000;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+        }
+        .scrollmenu div:hover{
+            background-color: #777;
+            border-bottom: 3px solid #f66436;
+        }
+        .active1{
+            background-color: #777;
+            border-bottom: 3px solid #000;
+        }
+    </style>
 </head>
 
 <body>
-    
     <!--Navigation-->
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
         <div class="container-fluid">
@@ -85,13 +106,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/internship">Internship</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ">
                         <a class="nav-link" href="/inspiration">Inspiration</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/uncensored">Uncensored</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ">
                         <a class="nav-link" href="/noticeboard">NoticeBoard</a>
                     </li>
                 </ul>
@@ -99,44 +120,9 @@
 
         </div>
     </nav>
-
-    {{!-- <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Default</a>
-    </div>
-    </nav>
-    <div class="responsive slider">
-        <div>home</div>
-        <div>campus 101</div>
-        <div>interviews</div>
-        <div>internship</div>
-        <div>inspiration</div>
-        <div>uncensored</div>
-        <div>noticeboard</div>
-    </div>
-    <section class="center slider">
-        <div>
-            All-1
-        </div>
-        <div>
-            All-2
-        </div>
-        <div>
-            All-3
-        </div>
-        <div>
-            All-4
-        </div>
-        <div>
-            All-5
-        </div>
-        <div>
-            All-6
-        </div>
-        <div>
-            All-7
-        </div>
-    </section> --}}
+    
+    
+    
     <!--slider images-->
     <div class="container-fluid ">
 
@@ -302,6 +288,7 @@
             </div>
         </div>
     </div>
+    
 
     <!--Two column section-->
     <div class="container">
@@ -1299,6 +1286,53 @@
         <p class="text-center">&copy; Copyright 2021 - CampusWeekly. All Rights Reserved.</p>
     </div>
 
+    <div class="container scrollmenu indicator d-flex">
+        <div class="active1" onclick="indicateSlide(this)" id="0">
+            {{!-- <a class="active1" href="/">Home</a> --}}Home
+        </div>
+        <div onclick="indicateSlide(this)" id="1">
+            {{!-- <a href="/">Home2</a> --}}Home
+        </div>
+        <div onclick="indicateSlide(this)" id="2">
+            {{!-- <a href="/">Home3</a> --}}Home
+        </div>
+        <div onclick="indicateSlide(this)" id="3">
+            {{!-- <a href="/">Home4</a> --}}Home
+        </div>
+        <div onclick="indicateSlide(this)" id="4">
+            {{!-- <a href="/">Home5</a> --}}Home
+        </div>
+        <div onclick="indicateSlide(this)" id="5">
+            {{!-- <a href="/">Home6</a> --}}Home
+        </div>
+        <div onclick="indicateSlide(this)" id="6">
+            {{!-- <a href="/">Home7</a> --}}Home
+        </div>
+        <div onclick="indicateSlide(this)" id="7">
+            {{!-- <a href="/">Home8</a> --}}Home
+        </div>
+        <div onclick="indicateSlide(this)" id="8">
+            {{!-- <a href="/">Home9</a> --}}Home
+        </div>
+        {{!-- <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Support</a>
+        <a href="#">Blog</a>
+        <a href="#">Tools</a>
+        <a href="#">Base</a>
+        <a href="#">More</a>
+        <a href="#">Logo</a>
+        <a href="#">Friends</a> --}}
+    </div>
+    <div class="container">
+        <div class="row text-center" style="margin: auto;">
+            <div class="col-12">
+                <hr style="width: 100%; border: 10px solid #051e58;">
+            </div>
+        </div>
+    </div>
+
     <script>
         var beamer_config = {
             product_id: "IpeHROOo31380" //DO NOT CHANGE: This is your product code on Beamer
@@ -1379,6 +1413,22 @@
                 ]
             });
         });
+    </script>
+    <script>
+        const indicator = document.querySelector(".indicator");
+        let index = 0;
+
+        function indicateSlide(element){
+            index=element.id;
+            updateCircleIndicator();
+        }
+
+        function updateCircleIndicator(){
+            for(let i=0; i<indicator.children.length; i++){
+                indicator.children[i].classList.remove("active1");
+            }
+            indicator.children[index].classList.add("active1");
+        }
     </script>
 </body>
 

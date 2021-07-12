@@ -1,297 +1,453 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="B8PV6ghxu6KjVV0ny-1zjnRAbsB2XO5TjL8Fwd-h_u8" />
-    <meta name="keywords" content="CampusWeekly, campusweekly, campus weekly, campus news, campus weekly news">
-    <meta name="keywords"
-        content="campus weekly lira university, lira, lira university, latest news, lukard, lukenge, campus news lira university">
-    <meta http-equiv="Cache-Control" content="public, max-age=300, s-maxage=600">
-    <title>Campus Weekly</title>
-    <link rel="shortcut icon" href="images/campusweeklyfavicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="fonts/font-awesome.min.css">
-    
-
-
-    
-    <style type="text/css">
-        body {
-        font-family: "Montserrat", sans-serif;
-        background-color: #eee;
-        }
-
-        /* navbar */
-        .sidebar {
-        height: 100vh;
-        background: #051e58;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: 5px 7px 25px #999;
-        }
-
-        .bottom-border {
-        border-bottom: 1px groove #eee;
-        }
-
-        .sidebar-link {
-        transition: all 0.4s;
-        }
-
-        .sidebar-link:hover {
-        background-color: #444;
-        border-radius: 5px;
-        }
-
-        .current {
-        background-color: #f44336;
-        border-radius: 7px;
-        box-shadow: 2px 5px 10px #111;
-        transition: all 0.3s;
-        }
-
-        .current:hover {
-        background-color: #f66436;
-        border-radius: 7px;
-        box-shadow: 2px 5px 20px #111;
-        transform: translateY(-1px);
-        }
-
-        .search-input {
-        background: transparent;
-        border: none;
-        border-radius: 0;
-        border-bottom: 2px solid #999;
-        transition: all 0.4s;
-        }
-
-        .search-input:focus {
-        background: transparent;
-        box-shadow: none;
-        border-bottom: 2px solid #dc3545;
-        }
-
-        .search-button {
-        border-radius: 50%;
-        padding: 10px 16px;
-        transition: all 0.4s;
-        }
-
-        .search-button:hover {
-        background-color: #eee;
-        transform: translateY(-1px);
-        }
-
-        .icon-parent {
-        position: relative;
-        }
-
-        .icon-bullet::after {
-        content: "";
-        position: absolute;
-        top: 7px;
-        left: 15px;
-        height: 12px;
-        width: 12px;
-        background-color: #f44336;
-        border-radius: 50%;
-        }
-
-        @media (max-width: 768px) {
-        .sidebar {
-            position: static;
-            height: auto;
-        }
-
-        .top-navbar {
-            position: static;
-        }
-        }
-        /* end of navbar */
-
-        /* cards */
-        .card-common {
-        box-shadow: 1px 2px 5px #999;
-        transition: all 0.4s;
-        }
-
-        .card-common:hover {
-        box-shadow: 2px 3px 15px #999;
-        transform: translateY(-1px);
-        }
-        /* end of cards */
-
-        /* task list */
-        .task-border {
-        border-left: 3px solid #f66436;
-        }
-        /* end of task list */
-
-    </style>
-</head>
-
-<body>
-    
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-light">
-        <button class="navbar-toggler ml-auto mb-2" type="button" data-toggle="collapse" data-target="#myNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- sidebar -->
-                    <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
-                        <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">CampusWeekly</a>
-                        <div class="bottom-border pb-3">
-                            <img src="images/lukard_avatar.jpg" width="50" class="rounded-circle mr-3" alt="Lukenge-Benard">
-                            <a href="#" class="text-white">Lukenge-Benard</a>
-                        </div>
-                        <ul class="navbar-nav flex-column mt-4">
-                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 current"><i class="fa fa-home text-light fa-lg mr-3"></i>Dashboard</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa fa-user text-light fa-lg mr-3"></i>Profile</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa fa-envelope text-light fa-lg mr-3"></i>Inbox</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa fa-shopping-cart text-light fa-lg mr-3"></i>Sales</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa fa-line-chart text-light fa-lg mr-3"></i>Analytics</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa fa-bar-chart text-light fa-lg mr-3"></i>Charts</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa fa-table text-light fa-lg mr-3"></i>Tables</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa fa-wrench text-light fa-lg mr-3"></i>Settings</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa fa-file-text text-light fa-lg mr-3"></i>Documentation</a></li>
-                        </ul>
-
+    <!--hr on top-->
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="row align-items-center mr-2">
+                    <div class="col-12">
+                        <h1 style="text-align: center;">ALL</h1>
+                        <hr style="width: 100%; border: 10px solid #051e58;">
                     </div>
-                    <!-- end of sidebar -->
-                    <!-- top-nav -->
-                    <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark fixed-top py-2 top-navbar">
-                        <div class="row align-items-center">
-                            <div class="col-md-4">
-                                <h4 class="text-light text-uppercase mb-0">Dashboard</h4>
-                            </div>
-                            <div class="col-md-5">
-                                <form>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control search-input" placeholder="Search...">
-                                        <button type="button" class="btn btn-white search-button"><i class="fa fa-search text-danger"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-md-3">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item icon-parent"><a href="#" class="nav-link icon-bullet"><i class="fa fa-comments text-muted fa-lg"></i></a></li>
-                                    <li class="nav-item icon-parent"><a href="#" class="nav-link icon-bullet"><i class="fa fa-bell text-muted fa-lg"></i></a></li>
-                                    <li class="nav-item ml-md-auto"><a href="#" class="nav-link" data-toggle="modal" data-target="#sign-out"><i class="fa fa-sign-out text-danger fa-lg"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of top-nav -->
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- end of navbar -->
-
-    <!-- modal -->
-    <div class="modal fade" id="sign-out">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Want to leave?</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    Press logout to leave
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Stay Here</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Logout</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end of modal -->
 
-    <!-- cards -->
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
-                    <div class="row pt-md-5 mt-md-3 mb-5">
-                        <div class="col-xl-3 col-sm-6 p-2">
-                            <div class="card card-common">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-shopping-cart fa-3x text-warning"></i>
-                                        <div class="text-right text-secondary">
-                                            <h5>Sales</h5>
-                                            <h3>$135,000</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-secondary">                                  
-                                    <i class="fa fa-refresh mr-3"></i>
-                                    <span>Updated Now</span>
-                                </div>
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">July 12, 2021</span>
                             </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
                         </div>
-                        <div class="col-xl-3 col-sm-6 p-2">
-                            <div class="card card-common">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-money fa-3x text-success"></i>
-                                        <div class="text-right text-secondary">
-                                            <h5>Expenses</h5>
-                                            <h3>$39,000</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-secondary">                                  
-                                    <i class="fa fa-refresh mr-3"></i>
-                                    <span>Updated Now</span>
-                                </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/seraCC2.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">CLIMATE CHANGE ACTIVITISM AT LIRA UNIVERSITY (LU)</h3>
+                            <h6 style="font-weight: bold;" class="d-flex justify-content-between">
+                                <span>
+                                    <i class="fa fa-edit"></i> Story by Kwerit Sarah Chebijirah
+                                </span>
+                                <img class="img-fluid" src="images/sera1.jpg" alt="image"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                “In case the world fails to step up climate action, continuing on our current climate trajectory could force 100 million people into extreme poverty by 2030. Africa is the most-exposed region to the adverse effects of climate change despite contributing the least to global warming. If fairness was the only goal, the impetus to act would lie solely with developed economies.”
+
+                                &nbsp;
+                                ...
+                                <a href="/climate-change" class="btn btn-outline-primary">Read more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">July 02, 2021</span>
                             </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
                         </div>
-                        <div class="col-xl-3 col-sm-6 p-2">
-                            <div class="card card-common">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-users fa-3x text-info"></i>
-                                        <div class="text-right text-secondary">
-                                            <h5>Users</h5>
-                                            <h3>15,000</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-secondary">                                  
-                                    <i class="fa fa-refresh mr-3"></i>
-                                    <span>Updated Now</span>
-                                </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/lukard_logo.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">I AM NOT FINE</h3>
+                            <h6 style="font-weight: bold;" class="d-flex justify-content-between">
+                                <span>
+                                    <i class="fa fa-edit"></i> Story From
+                                    <a href="https://adventuresoflukard.herokuapp.com" target="_blank"
+                                        style="text-decoration: none; ">Lukard Adventures</a>
+                                </span>
+                                <img class="img-fluid" src="images/lukardlogo.jpg" alt="lukard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                Do not let my show fool you. Please don’t! I am not fine. I know I am supposed to be alright; but I am not. I am very much afraid to tell anyone either because I pretty much do not want to make anyone uncomfortable.
+                                &nbsp;
+                                ...
+                                <a href="https://adventuresoflukard.herokuapp.com/fine" class="btn btn-outline-primary">Read more</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">July 02, 2021</span>
                             </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
                         </div>
-                        <div class="col-xl-3 col-sm-6 p-2">
-                            <div class="card card-common">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa fa-line-chart fa-3x text-danger"></i>
-                                        <div class="text-right text-secondary">
-                                            <h5>Visitors</h5>
-                                            <h3>45,000</h3>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/lukard_logo.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">POWERLESS</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story From
+                                <a href="https://adventuresoflukard.herokuapp.com" target="_blank"
+                                    style="text-decoration: none; ">Lukard Adventures</a>
+                                <img class="img-fluid" src="images/lukardlogo.jpg" alt="lukard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                Some days are not exactly that great – at campus! Yeah, to be fair, most of them are fun; I mean for
+                                those at campus or gone through campus you know what I am talking about. Every class you take is
+                                your very own decision.
+                                &nbsp;
+                                ...
+                                <a href="/powerless" class="btn btn-outline-primary">Read more</a>
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">June 25, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/binepe.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">Interview With The Deputy National Coordinator, Debate Presidents Council</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                
+                                This week in an interview with Mr. Binepe Lhwanzo Bwambale, the newly elected Deputy National Coordinator, we bring to you a look at the Uganda University Debate Presidents Council and a quick peek through the guest’s rather interesting leadership journey.
+                                &nbsp;
+                                ...
+                                <a href="/interview-with-mr-bwambale" class="btn btn-outline-primary">Read more</a>
+                            
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">June 19, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/news3.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">THIS WEEK ON CAMPUS WEEKLY</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                
+                                Saying that this has been a rather interesting week would be an extremely unfairly statement to so many! Well, let’s just take a lens! And look at events going backwards throughout this entire week.
+                                &nbsp;
+                                ...
+                                <a href="/saturday-19-june-2021" class="btn btn-outline-primary">Read more</a>
+                                
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">June 12, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/news2.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">THIS WEEK ON CAMPUS WEEKLY</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                ...
+                                &nbsp;
+                                All this came to a surprise stand still on the night of Sunday, the 6th June, 2021. Well, to some, it wasn’t really a surprise per say! This special night housed the President’s address to the nation in response to the so called second wave of the famous COVID-19 pandemic in Uganda.
+                                &nbsp;
+                                ...
+                                <a href="/saturday-12-june-2021" class="btn btn-outline-primary">Read more</a>
+                               
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">May 28, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/sera.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">MY DECISION TO STUDY PSYCHOLOGY AT LIRA UNIVERSITY </h3>
+                            <h6 style="font-weight: bold;" class="d-flex justify-content-between">
+                                <span>
+                                    <i class="fa fa-edit"></i> Story by Kwerit Sarah Chebijirah
+                                </span>
+                                <img class="img-fluid" src="images/sera1.jpg" alt="image"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                The world is made up of 7 billion people with the power to make or break society, therefore, the 
+                                most important topic area you could ever study is these people. When someone asks me what 
+                                Psychology is I tell them it is the science of the most complex machine on this planet, the mind. 
+                                The complexity and the mystery which enshrouds the human mind has always appealed me.
+
+                                &nbsp;
+                                ...
+                                <a href="/my-decision" class="btn btn-outline-primary">Read more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">May 23, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/food.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">FOOD AND RESTAURANTS</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                In the evening of course, the trend was still the same. Abby’s Joint was the place to meet! This guy made the best Rolex. Combined with some porridge or tea and supper was done.
+                                &nbsp;
+                                ...
+                                <a href="/food-and-restaurants" class="btn btn-outline-primary">Read more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">May 18, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/payday1.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">TIED AND READY – THE MONEY’S HERE</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                720,000 digits. At exactly 4:20pm! Not a second later! The notifications were already spreading the happiness, all around. The Dean Of Students came through. As promised, the digits have been making their way throughout the Students’ Bank Accounts this entire evening.
+                                &nbsp;
+                                ...
+                                <a href="/tied-and-ready" class="btn btn-outline-primary">Read more</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">May 16, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col">
+                            <h3 style="text-align: center;" class="card-title">TO ALL GOVERNMENT SPONSORED STUDENTS </h3>
+                            <h6 style="font-weight: bold; text-align: center;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                            style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                        </div>
+                        <div class="row padding">
+                            <div class="col-lg-4">
+                                <img class="img-fluid card-img" src="images/dean.jpg" alt="image" style="">
+                            </div>
+                            <div class="col-md-12 col-lg-8">
+                                <div class="container">
+                                    <div class="row padding">
+                                        <div class="col-lg-6">
+                                            <p>
+                                                I hope this finds you well and good.
+                                            </p>
+                                            <h6 style="font-weight: bold;">INFORMATION FROM THE DEAN OF STUDENTS</h6>
+                                            <p>
+                                                Please note that your living out allowance payment for next semester (Sem 2) was initiated on Friday, 14th May, 2021.
+                                            </p>
+                                            <p>
+                                                To that end therefore; you will be receiving a payment notification from your respectful banks any time from now.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-12 col-lg-6">
+                                            <p>
+                                                This means that the allowance for next semester is also going to be availed this semester. 
+                                                <br><br>
+                                                You are thereby requested to use that money sparingly; just as earlier requested, through the Communication hosted on the noticeboards by the Dean’s Office.
+                                            </p>
+                                            <p>
+                                                Kind regards, <br> Charles Chosen Muyingo.
+                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-footer text-secondary">                                  
-                                    <i class="fa fa-refresh mr-3"></i>
-                                    <span>Updated Now</span>
                                 </div>
                             </div>
                         </div>
@@ -299,8 +455,682 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!-- end of cards -->
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">May 12, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/please.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">CHECK ON YOUR FRIENDS </h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by Aron Eryau
+                                <img class="img-fluid" src="images/aa.jpg" alt="image"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                We live in a world where there is endless scrolling, typing, likes and emoji. Communication has been
+                                made easy, life is so much better with twitter, Facebook, Instagram filters and so on. People rarely
+                                use pen and paper to write to lovers anymore; which I think is kind of old school and romantic, but
+                                the truth is we never really bond anymore.
+                                &nbsp;
+                                ...
+                                <a href="/check-on-your-friends" class="btn btn-outline-primary">Read more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">May 08, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/new.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">THIS WEEK’S EVENTS</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                Joining in on the week with smiles and energy from last week’s Saturday, this week’s Sunday, 2nd
+                                May, 2021 saw the Freshers face off with the giants from the ongoing students in the different
+                                sports activities that were arranged.
+                                &nbsp;
+                                ...
+                                <a href="/saturday-8-may-2021" class="btn btn-outline-primary">Read more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">May 01, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/news.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">THIS WEEK ON CAMPUS WEEKLY</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                Ending the past week; Saturday, 24th April, 2021 saw a fuel tanker truck plunge into R. Nile at
+                                Karuma Bridge killing two people. These were believed to be the driver and the turn man for the
+                                vehicle, registration number UAS 337M, trailer number MMF 450.
+                                &nbsp;
+                                ...
+                                <a href="/saturday-1-may-2021" class="btn btn-outline-primary">Read more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">April 22, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/swear.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">LDC GUILD AND STUDENTS' COUNCIL SWEARING IN </h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i>
+                                Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                Happening on Wednesday, 21st April, 2020 at the Lira University Teaching Hospital Grounds.
+                                &nbsp;
+                                <br>
+                                ...
+                            </p>
+                            <p class="card-text">
+
+                                <a href="/LDC-guild-swearing-in" class="btn btn-outline-primary">Editorial in Pictures</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">April 21, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/mental.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">MENTAL HEALTH AWARENESS </h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by Ocen Daniel Comboni
+                                <img class="img-fluid" src="images/comboni2.jpg" alt="image"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                World Health Organization defines mental health as a state of physical and psychological wellbeing
+                                of an individual. Therefore Health, “is a state of complete physical, mental and social well-being!
+                                Not merely the absence of disease or infirmity."
+                                &nbsp;
+                                ...
+                                <a href="/mental-health-awareness" class="btn btn-outline-primary">Read more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">April 19, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/lackmoney.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">LACK OF MONEY IS THE ROOT OF ALL EVIL </h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by Ocepa Amos
+                                <img class="img-fluid" src="images/amos2.jpg" alt="image"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                “Life is hard. Life has become hard one of these days. The world has become too small for me.” These
+                                are some of the wordings that fill both teenage and adult conversations most if not all the time.
+                                But has it ever occurred to you
+                                to get deep down into the heart of the matter?
+                                &nbsp;
+                                ...
+                                <a href="/money" class="btn btn-outline-primary">Read more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">April 19, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/liz1.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">SHE WON!</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                With 65 votes, Ms. Nabakooza Elizabeth beat Mr. Bitarinsha Yoramu who had 59 votes; making two
+                                significant records! She became the first ever female Chief Fresher and the first ever Chief Fresher
+                                from Buganda.
+
+                            </p>
+                            <p class="card-text">
+                                ...
+                                <a href="/she-won" class="btn btn-outline-primary">Read more</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">April 18, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/debate2.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">THE CHIEF FRESHERS’ DEBATE!</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                Happening on Friday, 16th April, 2021 just two days to the Elections day, Sunday, 18th April, 2021;
+                                the Chief Freshers’ Debate was organized by the Lira University Debate Society in partnership with
+                                the African Youth Leadership Forum (AYLF) – Lira University Chapter.
+                                &nbsp;
+                                ...
+                                <a href="/chief-fresher-debate" class="btn btn-outline-primary">Read more</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">< April 18, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/inspiration2.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">HOW MUCH ARE WE DOING AS STUDENT MIDWIVES </h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by Aron Eryau
+                                <img class="img-fluid" src="images/aa.jpg" alt="image"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                What can I say? You know that little excitement that you get once you’ve just tweeted or posted a
+                                photo on Facebook, and many people liked it! Well yeah, that's the exact kind of high I get every
+                                time a patient says thank you, you were so helpful.
+                                &nbsp;
+                                ...
+                                <a href="/student-midwives" class="btn btn-outline-primary">Read more</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">< April 18, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/graduation1.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">LIRA UNIVERSITY 2ND GRADUATION CEREMONY</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                Friday, 9th April, 2021 joyfully marked it's signifance in the history books as the date the second
+                                graduation ceremony of Lira University was held. The first graduation already holding its position
+                                in the dates of another Friday, the 1st November, 2019.
+
+
+                            </p>
+                            <p class="card-text">
+                                ...
+                                <a href="/graduation" class="btn btn-outline-primary">Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">< April 18, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/debate2.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">THE DEBATE SOCIETY</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                You haven’t lived till you have attended one of the intellectual discussions held by the debate
+                                society of Lira University. You just haven’t! I was invited to one of these sessions and I tell you
+                                right here right now, my friends, the experience I got was unprecedented! It was the best feeling,
+                                being in the same room with such great minds.
+                                <br>
+                                ...
+                                <a href="/lifestyle" class="btn btn-outline-primary">Read more</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">< April 18, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/midwifery.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">MIDWIFERY INTERNSHIP</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                “In Uganda, midwives have been traditionally prepared mainly to perform the role of subordinates to
+                                the doctors. The Bachelor of Science in Midwifery program is to elevate midwifery to an educational
+                                level that prepares midwives to exercise critical thinking and judgement in the provision of
+                                comprehensive and integrated reproductive health practice, as well as community-based health care.
+                                ...
+                                <a href="/midwifery-internship" class="btn btn-outline-primary">Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">< April 18, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/uganda-currency.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">BREAKING NEWS</h3>
+
+                            <p class="card-text">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It’s here! It finally is! You have used
+                                that borrowed pen for quite a
+                                while now! You have shied away
+                                from even stepping inside Mr Muwonge’s YammieShoppers Supermarket, for long.
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It’s high time. Yes, I’m talking to the
+                                government student who’s been
+                                praying for a drop of water in
+                                this drought, that has no borders, reaching far deep inside the pockets.
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Today, the 25th March, 2021, at about
+                                5:30 pm, the phones belonging to
+                                the
+                                government students
+                                all
+                                beeped at the same time as they were finally rescued from the anticipation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">< April 18, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/midwife2.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">THEY ARE BACK!</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                Leaving on Monday, 22nd February, 2021, dispatched to various hospitals in the region, the present
+                                day year two midwifery students completed their first internship program with the first lot
+                                reporting back to campus on Friday, 19th March, 2021.
+                            </p>
+                            <p class="card-text">
+                                The CampusWeekly™ lens happened to be in the vicinity of some of these extremely happy-to-be-back
+                                members of the health community. Preferring anonymity, the jubilant midwives-to-be interviewed
+                                narrated their experiences to our reporters.
+                                <br>
+                                ...
+                                <br>
+                                <a href="/they-are-back" class="btn btn-outline-primary">Read more</a>
+                            </p>              
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Two column section-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="card" style="margin-bottom: 10px;">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between">
+                            <div class="text-right text-secondary">
+                                <span class="badge badge-danger p-2" style="border-radius: 40%; font-weight: lighter;">NEW</span>
+                                <span class="text-muted" style=" font-weight: lighter;">< April 18, 2021</span>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#sign-out"><i class="fa fa-share-alt fa-lg text-muted p-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="row padding card-body align-items-center">
+                        <div class="col-lg-4">
+                            <img class="img-fluid card-img" src="images/smith-1.jpg" alt="image" style="">
+                        </div>
+                        <div class="col-md-12 col-lg-8">
+                            <h3 class="card-title">Interview with LDC Guild President</h3>
+                            <h6 style="font-weight: bold;">
+                                <i class="fa fa-edit"></i> Story by The Editor
+                                <img class="img-fluid" src="images/lukard_avatar.jpg" alt="Lukenge-Benard"
+                                    style="width: 40px; margin-top: -15px; border-radius: 100%;">
+                            </h6>
+                            <p class="card-text">
+                                Having any doubts on whether leadership and good looks have any intersection whatsoever? I'm quite
+                                sure you just haven't met H. E Rutebemberwa Smith! The cutest man from the land of Ankole currently
+                                residing over a team of eight Guild officials leading an entire intake of close to three hundred and
+                                fifteen 2020/2021 lawyers.
+                            </p>
+                            <p class="card-text">
+                                The Law Development Centre opening its third branch at Lira Campus, the first and second being
+                                Kampala Main Branch and Mbarara, brings with it a new feel and style to the air the campus has been
+                                used to. Yes, the full time high standard taste in attire is not an attribute shared only by Mr.
+                                Smith. No, my friend, the university just got itself three hundred and fifteen recruits pulling off
+                                a completely new swag for the campus.
+                                <br> 
+                                ...
+                                <br>
+                                <a href="/ldc-guild-president-interview" class="btn btn-outline-primary">Read more</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+ 
+
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- tables -->
     <section>
@@ -491,7 +1321,7 @@
     <!-- end of tables -->
 
     <!-- progress / task list -->
-    <section>
+    {{!-- <section>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
@@ -612,11 +1442,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- progress / task list -->
 
     <!-- activities / Quick post -->
-    <section>
+    {{!-- <section>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
@@ -759,50 +1589,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- end of activities / Quick post -->
-
-    <!-- footer -->
-    <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
-                    <div class="row border-top pt-3">
-                        <div class="col-lg-6 text-center">
-                            <ul class="list-inline">
-                                <li class="list-inline-item mr-2">
-                                    <a href="#" class="text-dark">CampusWeekly</a>
-                                </li>
-                                <li class="list-inline-item mr-2">
-                                    <a href="#" class="text-dark">About</a>
-                                </li>
-                                <li class="list-inline-item mr-2">
-                                    <a href="#" class="text-dark">Support</a>
-                                </li>
-                                <li class="list-inline-item mr-2">
-                                    <a href="#" class="text-dark">Blog</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6 text-center">
-                            <p>&copy; 2018 Copyright. Made With <i class="fa fa-heart text-danger"></i> by <span class="text-success">CampusWeekly</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- end of footer -->
-
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="script.js"></script>
-
-   
-</body>
-
-</html>

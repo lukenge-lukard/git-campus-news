@@ -4,39 +4,45 @@ const router = express.Router();
 
 // maintabs
 router.get("/", (req, res)=>{
-    res.render("maintabs/index");
+    res.render("admin/index", {layout: 'landingPage'});
 });
-router.get("/dashboard", (req, res)=>{
-    res.render("maintabs/dashboard");
+router.get("/feed", (req, res)=>{
+    res.render("maintabs/dashboard", {layout: 'all'});
 });
 router.get("/campus-101", (req, res)=>{
-    res.render("maintabs/campus-101");
+    res.render("maintabs/campus-101", {layout: 'campus101'});
 });
 router.get("/interview", (req, res)=>{
-    res.render("maintabs/interview");
+    res.render("maintabs/interview", {layout: 'interview'});
 });
 router.get("/internship", (req, res)=>{
-    res.render("maintabs/internship");
+    res.render("maintabs/internship", {layout: 'internship'});
 });
 router.get("/noticeboard", (req, res)=>{
-    res.render("maintabs/noticeboard");
+    res.render("maintabs/noticeboard", {layout: 'noticeboard'});
 });
 router.get("/inspiration", (req, res)=>{
-    res.render("maintabs/inspiration");
+    res.render("maintabs/inspiration", {layout: 'inspiration'});
 });
 router.get("/uncensored", (req, res)=>{
-    res.render("maintabs/uncensored");
+    res.render("maintabs/uncensored", {layout: 'uncensored'});
 });
 
 // admin routes
-router.get("/admin", (req, res)=>{
-    res.render("admin/login");
+router.get("/login", (req, res)=>{
+    res.render("admin/login", {layout: 'landingPage'});
 });
-router.get("/admin/index", (req, res)=>{
-    res.render("admin/index");
+router.get("/about", (req, res)=>{
+    res.render("admin/about", {layout: 'landingPage'});
+});
+router.get("/register", (req, res)=>{
+    res.render("admin/register", {layout: 'landingPage'});
 });
 router.get("/admin/dashboard", (req, res)=>{
     res.render("admin/dashboard");
+});
+router.get("/page-under-devt", (req, res)=>{
+    res.render("admin/page-under-devt", {layout: 'page-devt'});
 });
 
 // new story file routes
@@ -93,6 +99,9 @@ router.get("/food-and-restaurants", (req, res)=>{
 });
 router.get("/my-decision", (req, res)=>{
     res.render("my-decision");
+});
+router.get("/climate-change", (req, res)=>{
+    res.render("climate-change");
 });
 router.get("/saturday-12-june-2021", (req, res)=>{
     res.render("saturday-12-june-2021");
