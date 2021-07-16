@@ -27,6 +27,9 @@ router.get("/inspiration", (req, res)=>{
 router.get("/uncensored", (req, res)=>{
     res.render("maintabs/uncensored", {layout: 'uncensored'});
 });
+router.get("/team", (req, res)=>{
+    res.render("maintabs/team");
+});
 
 // admin routes
 router.get("/login", (req, res)=>{
@@ -111,6 +114,9 @@ router.get("/saturday-19-june-2021", (req, res)=>{
 });
 router.get("/interview-with-mr-bwambale", (req, res)=>{
     res.render("interview-with-mr-bwambale");
+});
+router.get("/african-child-by-binepe", (req, res)=>{
+    res.render("african-child-by-binepe");
 });
 
 module.exports = router;
