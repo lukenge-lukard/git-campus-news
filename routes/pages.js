@@ -118,5 +118,8 @@ router.get("/interview-with-mr-bwambale", (req, res)=>{
 router.get("/african-child-by-binepe", (req, res)=>{
     res.render("african-child-by-binepe");
 });
+router.get("/cry-of-african-child-poem", (req, res)=>{
+    res.render("cry-of-african-child-poem");
+});
 
 module.exports = router;
